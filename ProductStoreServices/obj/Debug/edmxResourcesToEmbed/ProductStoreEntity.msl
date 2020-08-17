@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ShopBridgeDBModelStoreContainer" CdmEntityContainer="ShopBridgeDBEntities">
+    <EntitySetMapping Name="Items">
+      <EntityTypeMapping TypeName="ShopBridgeDBModel.Item">
+        <MappingFragment StoreEntitySet="Item">
+          <ScalarProperty Name="Base64Content" ColumnName="Base64Content" />
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SearchItem" FunctionName="ShopBridgeDBModel.Store.SearchItem">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ShopBridgeDBModel.SearchItem_Result">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>
